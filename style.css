@@ -1,0 +1,124 @@
+/* Bg and font */
+body {
+  background: linear-gradient(135deg, #ffe4f0, #f8e1ff, #fff4c2);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/*container */
+.container {
+  text-align: center;
+  padding: 20px;
+  background: #fff0f8;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  width: 370px;
+}
+
+/* Title */
+h1 {
+  color: #d88ac2;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* inputss*/
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #f8c3ec;
+  border-radius: 12px;
+  width: 80%;
+  font-size: 1rem;
+  background: #fff9fd;
+  color: #aa4c9f;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #e2aef2;
+}
+
+/* Game board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px 0;
+  box-shadow: #f8e1ff;
+}
+
+/* Cells */
+.cell {
+  background-color: #fffaff;
+  border-radius: 15px;
+  font-size: 2.2rem;
+  color: #d56dba;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 2px #fdd7ef;
+}
+
+.cell:hover {
+  background-color: #ffeaf5;
+  box-shadow: inset 0 0 0 2px #f2a5e0;
+}
+
+/* Status text */
+.status {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #b84ca2;
+}
+
+/* Buttons */
+button {
+  background-color: #fcd6ec;
+  color: #9e2b7e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+button:hover {
+  background-color: #f9b9dd;
+}
+
+/* Winners */
+.celebrate {
+  color: #ff3fa4;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* emojis */
+.emoji-float {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  animation: float 3s ease-in-out forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes float {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -150%) scale(1.5); opacity: 0; }
+}
+
